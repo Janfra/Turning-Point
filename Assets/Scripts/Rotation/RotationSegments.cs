@@ -20,7 +20,7 @@ public static class RotationSegments
     public static RotationSegment GetSegmentFromDegrees(float angle)
     {
         const int COUNT = SEGMENT_COUNT * 2; // 12 segments of 30 degrees each to account for middle offset
-        angle = angle % 360;
+        angle = Mathf.Abs(angle % 360);
         for (int i = 0; i < COUNT; i++)
         {
             float segmentStart = (i * 30.0f); 
