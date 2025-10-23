@@ -9,7 +9,9 @@ namespace Input
     {
         [SerializeField]
         private UnityEvent _onInteract;
-
+        [SerializeField]
+        private UnityEvent _onInteractEnd;
+      
         private InputSystem_Actions _inputActions;
         private PlayerActions _playerActions;
         private UIActions _uiActions;
@@ -39,20 +41,25 @@ namespace Input
         public void AddListener(IInteractListener listener)
         {
             _playerActions.Interact.started += listener.OnInteract;
+            _playerActions.Interact.canceled += listener.OnInteractEnd; 
         }
 
         public void RemoveListener(IInteractListener listener)
         {
             _playerActions.Interact.started -= listener.OnInteract;
+            _playerActions.Interact.canceled -= listener.OnInteractEnd;
         } 
 
         #region IPlayerActions Interface
         public void OnInteract(InputAction.CallbackContext context)
         {
-            // Interact is only valid on started phase
             if (context.started)
             {
                 _onInteract?.Invoke();
+            }
+            else if (context.canceled)
+            {
+                _onInteractEnd?.Invoke();
             }
         }
 

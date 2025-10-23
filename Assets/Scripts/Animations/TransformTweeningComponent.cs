@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Extensions;
 using System;
 using UnityEngine;
 
@@ -10,6 +11,11 @@ public class TransformTweeningComponent : MonoBehaviour
     [SerializeField]
     private ShakeSettings _defaultShakeSettings;
     private Tweener _cachedTween;
+
+    private void Awake()
+    {
+        this.AssertReference(_target);
+    }
 
     public void Shake()
     {
@@ -31,7 +37,6 @@ public class TransformTweeningComponent : MonoBehaviour
             else
             {
                 _cachedTween.Kill();
-                _cachedTween = null;
                 CreateAndCacheTween(settings);
             }
         }
@@ -39,7 +44,12 @@ public class TransformTweeningComponent : MonoBehaviour
 
     private void CreateAndCacheTween(ShakeSettings settings)
     {
-        _cachedTween = settings.ApplyShakePositionTo(_target).SetId(this).SetAutoKill(false);
+        _cachedTween = settings.ApplyShakePositionTo(_target).SetId(this).OnKill(ClearCache);
+    }
+
+    private void ClearCache()
+    {
+        _cachedTween = null;
     }
 }
 
