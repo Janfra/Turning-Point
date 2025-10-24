@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 2969091913565811107}
   - component: {fileID: 1831895746705479918}
   - component: {fileID: 2707084487923557623}
-  - component: {fileID: 9102870281129528087}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -67,18 +66,6 @@ MonoBehaviour:
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1120391894147626487}
-        m_TargetAssemblyTypeName: TransformTweeningComponent, Assembly-CSharp
-        m_MethodName: Shake
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3820111404053786246}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -91,19 +78,19 @@ MonoBehaviour:
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9102870281129528087}
-        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
+      - m_Target: {fileID: 1120391894147626487}
+        m_TargetAssemblyTypeName: TransformTweeningComponent, Assembly-CSharp
+        m_MethodName: Shake
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: faf08d298b67bdf4db396fa2570d39e6, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Expand
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 9102870281129528087}
+      - m_Target: {fileID: 3890002388140322579}
         m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
@@ -115,9 +102,33 @@ MonoBehaviour:
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 3890002388140322579}
+        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: faf08d298b67bdf4db396fa2570d39e6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Expand
+          m_BoolArgument: 0
+        m_CallState: 2
   _onInteractEnd:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 3890002388140322579}
+        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 347206f90b3bf064bb472439d05798fc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 2969091913565811107}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnEndInteract
@@ -125,18 +136,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 9102870281129528087}
-        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
-        m_MethodName: ApplyAnimatorParameterEvent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 347206f90b3bf064bb472439d05798fc, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -186,19 +185,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShooterComponent
   _directionProvider: {fileID: 1831895746705479918}
---- !u!114 &9102870281129528087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 76628167927782811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316c31948cd25f4d88284063e54d5aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorModifierComponent
-  _animator: {fileID: 3738253206670890408}
 --- !u!1 &1675895291565791052
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +196,7 @@ GameObject:
   - component: {fileID: 5023531059902022540}
   - component: {fileID: 1120391894147626487}
   - component: {fileID: 2880531709025604931}
+  - component: {fileID: 3890002388140322579}
   m_Layer: 0
   m_Name: PlayerVisualHandler
   m_TagString: Untagged
@@ -274,6 +261,19 @@ MonoBehaviour:
   _topLeftSprite: {fileID: 5105011444763376755}
   _leftSprite: {fileID: 8641729755190207421}
   _bottomLeftSprite: {fileID: 6955047229917664562}
+--- !u!114 &3890002388140322579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675895291565791052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5316c31948cd25f4d88284063e54d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorModifierComponent
+  _animator: {fileID: 3738253206670890408}
 --- !u!1 &3390609947485667244
 GameObject:
   m_ObjectHideFlags: 0
