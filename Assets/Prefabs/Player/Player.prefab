@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5252774057034618629}
   - component: {fileID: 3069205093774324232}
+  - component: {fileID: 2969091913565811107}
   - component: {fileID: 1831895746705479918}
   - component: {fileID: 2707084487923557623}
   m_Layer: 0
@@ -53,9 +54,9 @@ MonoBehaviour:
   _onInteract:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2707084487923557623}
-        m_TargetAssemblyTypeName: ShooterComponent, Assembly-CSharp
-        m_MethodName: Shoot
+      - m_Target: {fileID: 2969091913565811107}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInteract
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63,18 +64,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Expand
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6433165835328774979}
-        m_TargetAssemblyTypeName: ConstantRotationComponent, Assembly-CSharp
-        m_MethodName: ToggleRotationDirection
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1120391894147626487}
@@ -113,6 +102,39 @@ MonoBehaviour:
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
+  _onInteractEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2969091913565811107}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnEndInteract
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2969091913565811107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76628167927782811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef072d920df9044fae3b48a853e02ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  _playerRotation: {fileID: 6433165835328774979}
+  _playerShooting: {fileID: 2707084487923557623}
+  _defaultRotationSpeed: 200
+  _maxRotationSpeed: 250
+  _accelerationRate: 50
+  _deccelerationRate: 100
 --- !u!114 &1831895746705479918
 MonoBehaviour:
   m_ObjectHideFlags: 0
