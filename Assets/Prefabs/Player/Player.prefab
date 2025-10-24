@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2969091913565811107}
   - component: {fileID: 1831895746705479918}
   - component: {fileID: 2707084487923557623}
+  - component: {fileID: 9102870281129528087}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -78,18 +79,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3738253206670890408}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Expand
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 3820111404053786246}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: PlayOneShot
@@ -97,6 +86,30 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 8300000, guid: 2597a871249e864429f493ea610481b1, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Expand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9102870281129528087}
+        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: faf08d298b67bdf4db396fa2570d39e6, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Expand
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9102870281129528087}
+        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 13ed3df344539fc4d97f36acb616fbb5, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Expand
@@ -112,6 +125,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 9102870281129528087}
+        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+        m_MethodName: ApplyAnimatorParameterEvent
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 347206f90b3bf064bb472439d05798fc, type: 2}
+          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -134,7 +159,7 @@ MonoBehaviour:
   _defaultRotationSpeed: 200
   _maxRotationSpeed: 250
   _accelerationRate: 50
-  _deccelerationRate: 100
+  _decelerationRate: 2
 --- !u!114 &1831895746705479918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +186,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShooterComponent
   _directionProvider: {fileID: 1831895746705479918}
+--- !u!114 &9102870281129528087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76628167927782811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5316c31948cd25f4d88284063e54d5aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimatorModifierComponent
+  _animator: {fileID: 3738253206670890408}
 --- !u!1 &1675895291565791052
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +413,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1907314187697453070, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3721172406862255631, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
       propertyPath: m_Name
