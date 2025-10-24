@@ -158,7 +158,7 @@ MonoBehaviour:
   _defaultRotationSpeed: 200
   _maxRotationSpeed: 250
   _accelerationRate: 50
-  _decelerationRate: 2
+  _decelerationRate: 100
 --- !u!114 &1831895746705479918
 MonoBehaviour:
   m_ObjectHideFlags: 0
