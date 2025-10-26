@@ -7,6 +7,7 @@ public abstract class MovementComponent : MonoBehaviour
 
     [SerializeField]
     protected Rigidbody2D _Rigidbody;
+    public Rigidbody2D Rigidbody => _Rigidbody;
 
     [SerializeField]
     protected float _MaxSpeed = 1.0f;

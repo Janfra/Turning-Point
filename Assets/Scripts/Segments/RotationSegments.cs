@@ -65,4 +65,10 @@ public static class RotationSegments
     {
         return ((int)segment * 60f); // No offset needed since rotation starts in the middle of a segment.
     }
+
+    public static (float MinAngle, float MaxAngle) GetSegmentAngleRange(RotationSegment segment)
+    {
+        float centerAngle = GetSegmentCenterAngle(segment);
+        return (centerAngle - 30f, centerAngle + 30f);
+    }
 }

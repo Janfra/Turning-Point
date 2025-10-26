@@ -9,9 +9,21 @@ public class ToTargetMovementComponent : MovementComponent
     [SerializeField]
     private float _acceleration = 0.1f;
 
+    public void SetTarget(Transform target, bool activate = true)
+    {
+        _target = target;
+        if (activate && _target)
+        {
+            IsActive = true;
+        }
+    }
+
     protected override void OnAwake()
     {
-        this.AssertReference(_target);
+        if (_target == null)
+        {
+            IsActive = false;
+        }
     }
 
     protected override void Move()
