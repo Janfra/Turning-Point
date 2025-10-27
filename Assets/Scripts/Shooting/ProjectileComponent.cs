@@ -12,6 +12,9 @@ public class ProjectileComponent : MonoBehaviour
     [SerializeField]
     private UnityEvent _onTargetReached;
 
+    [SerializeField]
+    private UnityEvent _onKilled;
+
     ITargetable _target;
     ContactData _contactData;
 
@@ -40,14 +43,31 @@ public class ProjectileComponent : MonoBehaviour
         return new Vector2(Mathf.Cos(radian), Mathf.Sin(radian)).normalized * SPREAD_FORCE;
     }
 
+    private void TryDealDamageToTargetable(ITargetable targetable)
+    {
+        if (_target.TryGetComponent(out IDamageable damageable))
+        {
+            if (!damageable.TakeDamage(_contactData.Damage))
+            {
+                _onKilled.Invoke();
+            }
+        }
+    }
+
+    private void ReachedTargetable(ITargetable targetable)
+    {
+        _contactData.Direction = _movementComponent.Rigidbody.linearVelocity.normalized;
+        _target.OnReached(_contactData);
+        _onTargetReached?.Invoke();
+        TryDealDamageToTargetable(_target);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.transform == _target.Transform)
         {
-            _contactData.Direction = _movementComponent.Rigidbody.linearVelocity.normalized;
-            _target.OnReached(_contactData);
+            ReachedTargetable(_target);
             _contactData = new();
-            _onTargetReached?.Invoke();
         }
     }
 }

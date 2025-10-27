@@ -1,3 +1,4 @@
+using Extensions;
 using UnityEngine;
 
 public abstract class AnimatorParameterEvent : ScriptableObject
@@ -7,4 +8,14 @@ public abstract class AnimatorParameterEvent : ScriptableObject
     public AnimatorParameterHasher Parameter => _parameter;
 
     public abstract void ApplyEventValue(AnimatorModifierComponent modifierComponent);
+
+    private void OnEnable()
+    {
+#if UNITY_EDITOR
+        if (Application.isPlaying)
+        {
+            this.AssertReference(_parameter);
+        }
+#endif
+    }
 }

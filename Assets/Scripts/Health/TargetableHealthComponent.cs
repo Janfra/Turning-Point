@@ -4,13 +4,21 @@ public class TargetableHealthComponent : HealthComponent, ITargetable
 {
     public Transform Transform => transform;
 
+    [Header("Debugging")]
+    public LogComponent Logger;
+
     public void OnTargeted()
     {
-        Debug.Log("Targeted Health");
+        Logger?.Log("Targeted Health", this);
     }
 
     public void OnReached(ContactData data)
     {
         TakeDamage(data.Damage);
+    }
+
+    private void OnHandleDeath()
+    {
+        gameObject.SetActive(false);
     }
 }

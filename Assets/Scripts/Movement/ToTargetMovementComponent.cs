@@ -1,5 +1,6 @@
 using Extensions;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ToTargetMovementComponent : MovementComponent
 {
@@ -8,6 +9,9 @@ public class ToTargetMovementComponent : MovementComponent
 
     [SerializeField]
     private float _acceleration = 0.1f;
+
+    [SerializeField]
+    private UnityEvent _onTargetLost;
 
     public void SetTarget(Transform target, bool activate = true)
     {
@@ -28,6 +32,12 @@ public class ToTargetMovementComponent : MovementComponent
 
     protected override void Move()
     {
+        if (_target == null || !_target.gameObject.activeSelf)
+        {
+            HandleTargetLost();
+            return;
+        }
+
         Vector3 direction = (_target.position - transform.position).normalized;
         if (!CanAccelerateOnDirection(direction))
         {
@@ -43,5 +53,11 @@ public class ToTargetMovementComponent : MovementComponent
         bool isSimilarDirection = Vector3.Dot(currentDirection, direction) > 0.9; // Will continue to accelerate if moving in a similar direction
         bool isBelowSpeedLimit = _Rigidbody.linearVelocity.sqrMagnitude < _MaxSpeed * _MaxSpeed;
         return !isSimilarDirection || isBelowSpeedLimit;
+    }
+
+    private void HandleTargetLost()
+    {
+        IsActive = false;
+        _onTargetLost.Invoke();
     }
 }

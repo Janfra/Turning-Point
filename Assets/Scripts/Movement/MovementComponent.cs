@@ -24,12 +24,11 @@ public abstract class MovementComponent : MonoBehaviour
 
     protected void FixedUpdate()
     {
+        OnFixedUpdate();
         if (IsActive)
         {
             Move();
         }    
-
-        OnFixedUpdate();
     }
 
     protected abstract void Move();

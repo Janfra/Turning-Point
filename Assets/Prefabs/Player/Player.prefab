@@ -185,6 +185,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShooterComponent
   _directionProvider: {fileID: 1831895746705479918}
+  _segmentAreasComponent: {fileID: 0}
+  _projectilePrefab: {fileID: 0}
+  _contactData:
+    Damage: 0
+    Force: 0
+    Direction: {x: 0, y: 0}
 --- !u!1 &1675895291565791052
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +325,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 0.27
   m_Pitch: 1
   Loop: 0
   Mute: 0

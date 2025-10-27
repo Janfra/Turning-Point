@@ -14,6 +14,10 @@ public class ConstantRotationComponent : MonoBehaviour
     [SerializeField]
     private RotationDirection _rotationDirection = RotationDirection.Clockwise;
 
+    [Header("Debugging")]
+    [SerializeField]
+    public LogComponent Logger;
+
     private void Update()
     {
         Rotate();
@@ -57,7 +61,7 @@ public class ConstantRotationComponent : MonoBehaviour
             case RotationDirection.CounterClockwise:
                 return rotationAngleOverTime;  
             default:
-                Debug.LogError("Unsupported rotation direction");
+                Logger?.LogError("Unsupported rotation direction", this);
                 return 0.0f;
         }
     }

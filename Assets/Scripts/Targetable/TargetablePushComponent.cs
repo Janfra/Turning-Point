@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class TargetablePushComponent : MonoBehaviour, ITargetable
@@ -7,15 +6,18 @@ public class TargetablePushComponent : MonoBehaviour, ITargetable
     private Rigidbody2D _rigidbody;
 
     public Transform Transform => transform;
+    
+    [Header("Debugging")]
+    public LogComponent Logger;
 
     public void OnTargeted()
     {
-        Debug.Log("Targeted Push"); 
+        Logger?.Log("Targeted Push", this); 
     }
 
     public void OnReached(ContactData data)
     {
-        Debug.Log($"Pushed with force: {data.Force} on direction: {data.Direction}");
+        Logger?.Log($"Pushed with force: {data.Force} on direction: {data.Direction}", this);
         _rigidbody.linearVelocity = Vector2.zero;
         _rigidbody.AddForce(data.Direction.normalized * data.Force);
     }
