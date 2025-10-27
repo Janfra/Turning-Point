@@ -32,34 +32,40 @@ public class LogComponent : MonoBehaviour
     [Conditional("UNITY_EDITOR")]
     public void Log(string message, Object context = null)
     {
+#if UNITY_EDITOR
         if (_logLevel >= LogLevel.Info)
         {
             Debug.Log(GetOutputMessage(message), context);
         }
+#endif
     }
 
     [Conditional("UNITY_EDITOR")]
-    public void LogWarning(string message, Object context = null) 
+    public void LogWarning(string message, Object context = null)
     {
+#if UNITY_EDITOR
         if (_logLevel >= LogLevel.Warning)
         {
             Debug.LogWarning(GetOutputMessage(message), context);
         }
+#endif
     }
 
     [Conditional("UNITY_EDITOR")]
     public void LogError(string message, Object context = null) 
     {
+#if UNITY_EDITOR
         if (_logLevel >= LogLevel.Error)
         {
             Debug.LogError(GetOutputMessage(message), context);
         }
-    }
-
-    private string GetOutputMessage(string message)
-    {
-#if UNITY_EDITOR
-        return $"{_cachedPrefix} {message}";
 #endif
     }
+
+#if UNITY_EDITOR
+    private string GetOutputMessage(string message)
+    {
+        return $"{_cachedPrefix} {message}";
+    }
+#endif
 }

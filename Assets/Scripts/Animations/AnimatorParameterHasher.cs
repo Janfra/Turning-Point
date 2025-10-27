@@ -1,4 +1,3 @@
-using UnityEditor.Animations;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "AnimatorParameterHasher", menuName = "Scriptable Objects/Animation/Animator Parameter Hasher")]
@@ -51,23 +50,6 @@ public class AnimatorParameterHasher : ScriptableObject
                     Debug.LogWarning($"Animator parameter '{_parameterName}' type mismatch. Expected: {_type}, Found: {parameter.type} in Animator '{animator.runtimeAnimatorController.name}'");
                 }
 
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool HasParameter(AnimatorController controller)
-    {
-        if (!_isInitialised)
-        {
-            Initialise();
-        }
-
-        foreach (var parameter in controller.parameters)
-        {
-            if (parameter.nameHash == ID)
-            {
                 return true;
             }
         }
