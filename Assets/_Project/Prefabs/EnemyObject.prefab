@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5551285043600169453}
   - component: {fileID: 4063156776438019123}
   - component: {fileID: 8381571742770050338}
-  - component: {fileID: 6711659781564689158}
+  - component: {fileID: 7825880072702247317}
   - component: {fileID: 8665232508950731911}
   m_Layer: 0
   m_Name: EnemyObject
@@ -197,13 +197,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6711659781564689158}
-        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+      - m_Target: {fileID: 7825880072702247317}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 385d039904d0aa648ba8661f21ba9359, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.Tools.Animation
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -249,13 +250,14 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6711659781564689158}
-        m_TargetAssemblyTypeName: AnimatorModifierComponent, Assembly-CSharp
+      - m_Target: {fileID: 7825880072702247317}
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 7c14639c7d68d294d8da64e27167738a, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AnimatorParameterEvent, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
+            Janito.Tools.Animation
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -371,7 +373,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
---- !u!114 &6711659781564689158
+--- !u!114 &7825880072702247317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,9 +382,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4764278995256445124}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5316c31948cd25f4d88284063e54d5aa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1f0c4921506261c4581ee6bc47f273f7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimatorModifierComponent
+  m_EditorClassIdentifier: Janito.Tools.Animation::Janito.Animations.AnimatorModifierComponent
   _animator: {fileID: 8665232508950731911}
 --- !u!95 &8665232508950731911
 Animator:

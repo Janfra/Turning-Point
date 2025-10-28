@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.janito.animationtools": {
+      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAnimationTools",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "fc676f4c129b73e7b41ab21d08ac9ee91bb90b6d"
+    },
     "com.unity.2d.animation": {
       "version": "12.0.2",
       "depth": 0,
