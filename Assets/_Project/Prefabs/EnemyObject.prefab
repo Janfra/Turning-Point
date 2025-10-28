@@ -198,13 +198,13 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7825880072702247317}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 385d039904d0aa648ba8661f21ba9359, type: 2}
           m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.Tools.Animation
+            Janito.AnimationTools
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -251,13 +251,13 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7825880072702247317}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 7c14639c7d68d294d8da64e27167738a, type: 2}
           m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.Tools.Animation
+            Janito.AnimationTools
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

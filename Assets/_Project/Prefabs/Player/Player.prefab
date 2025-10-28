@@ -91,26 +91,26 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7382683770782279206}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 13ed3df344539fc4d97f36acb616fbb5, type: 2}
           m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.Tools.Animation
+            Janito.AnimationTools
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 7382683770782279206}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: faf08d298b67bdf4db396fa2570d39e6, type: 2}
           m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.Tools.Animation
+            Janito.AnimationTools
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Expand
@@ -120,13 +120,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7382683770782279206}
-        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.Tools.Animation
+        m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 347206f90b3bf064bb472439d05798fc, type: 2}
           m_ObjectArgumentAssemblyTypeName: Janito.Animations.AnimatorParameterEvent,
-            Janito.Tools.Animation
+            Janito.AnimationTools
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -188,11 +188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShooterComponent
   _directionProvider: {fileID: 1831895746705479918}
-  _segmentAreasComponent: {fileID: 0}
-  _projectilePrefab: {fileID: 0}
+  _segmentAreasComponent: {fileID: 1655962575156531375}
+  _projectilePrefab: {fileID: 7058386037559792506, guid: 17a42934f3792fa4389f3c6a4a05b79e, type: 3}
   _contactData:
-    Damage: 0
-    Force: 0
+    Damage: 1
+    Force: 15
     Direction: {x: 0, y: 0}
 --- !u!1 &1675895291565791052
 GameObject:
@@ -591,6 +591,17 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 9040277069386087457, guid: 94e702c81fd3bed45956406f3a6ff6eb, type: 3}
   m_PrefabInstance: {fileID: 8444729698495963575}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1655962575156531375 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7190733319284257048, guid: 94e702c81fd3bed45956406f3a6ff6eb, type: 3}
+  m_PrefabInstance: {fileID: 8444729698495963575}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578382c57b79c754f9774ec4429a03e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SegmentAreasComponent
 --- !u!212 &1777002935513506839 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7897231453636838816, guid: 94e702c81fd3bed45956406f3a6ff6eb, type: 3}
