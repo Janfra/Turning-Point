@@ -3,7 +3,7 @@ Protect yourself, you can never stop going around, shoot at anything that approa
 
 Turning Point is a small project aiming to explore **Game Feel/Juice**. Simple gameplay with a single input from the player (mouse click) to focus on learning techniques to give the player the most feedback for their actions and their environment. 
 
-![game-gif](https://github.com/user-attachments/assets/0fdeb8b3-2994-426f-99ac-71944b0917ab)
+![game-gif](https://github.com/user-attachments/assets/d5a7bfde-2e64-4787-b1c9-5d3fd417d263)
 
 ## My Custom Packages
 The project includes my custom Unity package **Janito Animation Tools** which can be found in my [Janito-Unity-Packages](https://github.com/Janfra/Janito-Unity-Packages) repository.
