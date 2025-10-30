@@ -1,47 +1,62 @@
-using Extensions;
 using UnityEngine;
 
-public class AudioSourceModifierComponent : MonoBehaviour
+namespace Janito.Audio
 {
-    [SerializeField]
-    private AudioSource _audioSource;
-    [SerializeField]
-    private bool _isLocked = false;
-
-    private void Awake()
+    public class AudioSourceModifierComponent : MonoBehaviour
     {
-        this.AssertReference(_audioSource);
-    }
+        [SerializeField]
+        private AudioSource _audioSource;
+        [SerializeField]
+        private bool _isLocked = false;
 
-    public void PlayWithRandomPitch(float minPitch, float maxPitch)
-    {
-        if (!CanPlay())
+        private void Awake()
         {
-            return;
+            if (_audioSource == null)
+            {
+                throw new System.NullReferenceException($"AudioSourceModifierComponent in {name} requires a reference to an AudioSource component.");
+            }
         }
 
-        _audioSource.pitch = Random.Range(minPitch, maxPitch);
-        _audioSource.Play();
-    }
-
-    public void PlayWithRandomPitch(AudioPitchRandomizer pitchRandomizer)
-    {
-        if (!CanPlay()) 
+        public void PlayWithRandomPitch(float minPitch, float maxPitch)
         {
-            return;
+            if (!CanPlay())
+            {
+                return;
+            }
+
+            _audioSource.pitch = Random.Range(minPitch, maxPitch);
+            _audioSource.Play();
         }
 
-        pitchRandomizer.SetRandomPitch(_audioSource);
-        _audioSource.Play();
-    }
+        public void PlayWithRandomPitch(AudioPitchRandomizer pitchRandomizer)
+        {
+            if (!CanPlay())
+            {
+                return;
+            }
 
-    public void SetAudioLock(bool isLocked)
-    {
-        _isLocked = isLocked;
-    }
+            pitchRandomizer.SetRandomPitch(_audioSource);
+            _audioSource.Play();
+        }
 
-    public bool CanPlay()
-    {
-        return !_isLocked;
+        public void ApplyAudioSourceModification(AudioSourceModifier modifier)
+        {
+            modifier.ApplyAudioSourceModification(_audioSource);
+        }
+
+        public void ApplyAudioSourceModification(IAudioSourceModifier modifier)
+        {
+            modifier.ApplyAudioSourceModification(_audioSource);
+        }
+
+        public void SetAudioLock(bool isLocked)
+        {
+            _isLocked = isLocked;
+        }
+
+        public bool CanPlay()
+        {
+            return !_isLocked;
+        }
     }
 }
