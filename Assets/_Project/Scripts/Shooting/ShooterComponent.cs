@@ -10,6 +10,8 @@ public class ShooterComponent : MonoBehaviour
     [SerializeField]
     private ProjectileComponent _projectilePrefab;
     [SerializeField]
+    private Transform _aim;
+    [SerializeField]
     private ContactData _contactData;
 
     private void Awake()
@@ -17,6 +19,7 @@ public class ShooterComponent : MonoBehaviour
         this.AssertReference(_directionProvider);
         this.AssertReference(_segmentAreasComponent);
         this.AssertReference(_projectilePrefab);
+        this.AssertReference(_aim);
     }
 
     public void Shoot()
@@ -33,7 +36,7 @@ public class ShooterComponent : MonoBehaviour
             if (results[0].TryGetComponent(out ITargetable targetable))
             {
                 targetable.OnTargeted();
-                var projectile = Instantiate(_projectilePrefab, transform.position, transform.rotation);
+                var projectile = Instantiate(_projectilePrefab, transform.position, _aim.rotation);
                 projectile.SetContactData(_contactData);    
                 projectile.ShootAt(targetable, segment);
             }
