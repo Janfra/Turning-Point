@@ -251,12 +251,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8651809133101330583}
-        m_TargetAssemblyTypeName: AudioSourceModifierComponent, Assembly-CSharp
+        m_TargetAssemblyTypeName: Janito.Audio.AudioSourceModifierComponent, Janito.Audio
         m_MethodName: PlayWithRandomPitch
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 0d233585fa36ebb4e84e19af921fcd6d, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AudioPitchRandomizer, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Janito.Audio.AudioPitchRandomizer, Janito.Audio
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -346,12 +346,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 8651809133101330583}
-        m_TargetAssemblyTypeName: AudioSourceModifierComponent, Assembly-CSharp
+        m_TargetAssemblyTypeName: Janito.Audio.AudioSourceModifierComponent, Janito.Audio
         m_MethodName: PlayWithRandomPitch
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 8082a6b2a537af043a55696c09ee99eb, type: 2}
-          m_ObjectArgumentAssemblyTypeName: AudioPitchRandomizer, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: Janito.Audio.AudioPitchRandomizer, Janito.Audio
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

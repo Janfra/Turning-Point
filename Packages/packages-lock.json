@@ -1,11 +1,18 @@
 {
   "dependencies": {
-    "com.janito.animationtools": {
-      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAnimationTools",
+    "com.janito.animationpackage": {
+      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAnimationPackage",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "fc676f4c129b73e7b41ab21d08ac9ee91bb90b6d"
+      "hash": "ba2caddfac96d2596a1148384ac16eb3b53f104e"
+    },
+    "com.janito.audiopackage": {
+      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAudioPackage",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "ba2caddfac96d2596a1148384ac16eb3b53f104e"
     },
     "com.unity.2d.animation": {
       "version": "12.0.2",
