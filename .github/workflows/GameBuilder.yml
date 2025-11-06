@@ -16,11 +16,6 @@ jobs: # Public repo so skipping SSH step
         with:
           fetch-depth: 0
           lfs: true
-      - uses: actions/cache@v3
-        with:
-          path: Library
-          key: Library-${{ matrix.targetPlatform }}
-          restore-keys: Library-
       - uses: jlumbroso/free-disk-space@v1.3.1
       - uses: game-ci/unity-builder@v4
         env:
