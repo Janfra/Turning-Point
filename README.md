@@ -7,7 +7,9 @@ Turning Point is a small project aiming to explore **Game Feel/Juice**. Simple g
 
 <details>
 <summary>Older Versions Gameplay Gifs</summary>
-### Oldest Version Gif
+  
+### Oldest Gameplay Gif
+  
 ![game-gif](https://github.com/user-attachments/assets/d5a7bfde-2e64-4787-b1c9-5d3fd417d263)
 
 </details>
