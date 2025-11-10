@@ -1,8 +1,9 @@
 using Extensions;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Pool;
 
-public class ProjectileComponent : MonoBehaviour
+public class ProjectileComponent : MonoBehaviour, IPoolable<ProjectileComponent>
 {
     private const float SPREAD_FORCE = 220.0f;
 
@@ -18,9 +19,17 @@ public class ProjectileComponent : MonoBehaviour
     ITargetable _target;
     ContactData _contactData;
 
+    public IObjectPool<ProjectileComponent> Pool { get => _pool; set => _pool = value; }
+    private IObjectPool<ProjectileComponent> _pool;
+
     private void Awake()
     {
         this.AssertReference(_movementComponent);
+    }
+
+    public void ReleaseToPool()
+    {
+        Pool?.Release(this);
     }
 
     public void SetContactData(ContactData data)

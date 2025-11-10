@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2969091913565811107}
   - component: {fileID: 1831895746705479918}
   - component: {fileID: 2707084487923557623}
+  - component: {fileID: 3196485960804778560}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -189,12 +190,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ShooterComponent
   _directionProvider: {fileID: 1831895746705479918}
   _segmentAreasComponent: {fileID: 1655962575156531375}
-  _projectilePrefab: {fileID: 7058386037559792506, guid: 17a42934f3792fa4389f3c6a4a05b79e, type: 3}
+  _projectilePool: {fileID: 3196485960804778560}
   _aim: {fileID: 6401542216568020931}
   _contactData:
     Damage: 1
-    Force: 15
+    Force: 20
     Direction: {x: 0, y: 0}
+--- !u!114 &3196485960804778560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 76628167927782811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d00ebd16a4d49499f79d942fccce94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectilePoolComponent
+  _collectionCheck: 1
+  _defaultCapacity: 10
+  _maxSize: 100
+  projectilePrefab: {fileID: 7058386037559792506, guid: 17a42934f3792fa4389f3c6a4a05b79e, type: 3}
 --- !u!1 &1675895291565791052
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,6 +522,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5252774057034618629}
     m_Modifications:
+    - target: {fileID: 1268495037090466005, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1268495037090466005, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -52314959
+      objectReference: {fileID: 0}
     - target: {fileID: 1907314187697453070, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
@@ -553,6 +578,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8339608844516193814, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339608844516193814, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -52314959
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339608844516193814, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
