@@ -14,6 +14,9 @@ public abstract class PoolComponent<T> : MonoBehaviour where T : Component, IPoo
     protected ObjectPool<T> _Pool => _pool;
     private ObjectPool<T> _pool;
 
+    public int ActiveCount => _pool.CountActive;
+    public int InactiveCount => _pool.CountInactive;
+
     private void OnValidate()
     {
         _defaultCapacity = Mathf.Max(0, _defaultCapacity);

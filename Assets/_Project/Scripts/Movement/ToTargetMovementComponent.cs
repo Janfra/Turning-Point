@@ -32,7 +32,7 @@ public class ToTargetMovementComponent : MovementComponent
 
     protected override void Move()
     {
-        if (_target == null || !_target.gameObject.activeSelf)
+        if (_target == null || !_target.gameObject.activeInHierarchy)
         {
             HandleTargetLost();
             return;

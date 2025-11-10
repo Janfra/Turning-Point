@@ -16,9 +16,4 @@ public class TargetableHealthComponent : HealthComponent, ITargetable
     {
         TakeDamage(data.Damage);
     }
-
-    private void OnHandleDeath()
-    {
-        gameObject.SetActive(false);
-    }
 }

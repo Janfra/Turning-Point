@@ -99,6 +99,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4467305635998059050}
+  - component: {fileID: 5165394887903364184}
   - component: {fileID: 2083736577678769398}
   - component: {fileID: 6271829649510903926}
   - component: {fileID: 3463972745005449514}
@@ -131,6 +132,20 @@ Transform:
   - {fileID: 6050374476543686986}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5165394887903364184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4764278995256445124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 545da5ab978e1c8498326971729fec54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EntityComponent
+  _movementComponent: {fileID: 5551285043600169453}
+  _healthComponent: {fileID: 6271829649510903926}
 --- !u!114 &2083736577678769398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,23 +238,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TargetableHealthComponent
   _maxHealth: 5
-  _onDeath:
+  _onDeathStart:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8381571742770050338}
         m_TargetAssemblyTypeName: UnityEngine.CircleCollider2D, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 5551285043600169453}
-        m_TargetAssemblyTypeName: ToTargetMovementComponent, Assembly-CSharp
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -263,17 +266,56 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5633082378826095179}
-        m_TargetAssemblyTypeName: Janito.Audio.AudioSourceModifierComponent, Janito.Audio
-        m_MethodName: PlayWithRandomPitch
-        m_Mode: 2
+      - m_Target: {fileID: 5551285043600169453}
+        m_TargetAssemblyTypeName: ToTargetMovementComponent, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 17e55945f694cb14abea28efa929f5d7, type: 2}
-          m_ObjectArgumentAssemblyTypeName: Janito.Audio.AudioPitchRandomizer, Janito.Audio
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+  _onDeathEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5165394887903364184}
+        m_TargetAssemblyTypeName: EntityComponent, Assembly-CSharp
+        m_MethodName: ReleaseToPool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8381571742770050338}
+        m_TargetAssemblyTypeName: UnityEngine.CircleCollider2D, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 5551285043600169453}
+        m_TargetAssemblyTypeName: ToTargetMovementComponent, Assembly-CSharp
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   Logger: {fileID: 0}
 --- !u!114 &3463972745005449514
