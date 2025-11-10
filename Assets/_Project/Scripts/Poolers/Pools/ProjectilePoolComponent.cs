@@ -1,3 +1,4 @@
+using Extensions;
 using UnityEngine;
 
 public class ProjectilePoolComponent : PoolComponent<ProjectileComponent>
@@ -10,6 +11,11 @@ public class ProjectilePoolComponent : PoolComponent<ProjectileComponent>
     [SerializeField]
     private LogComponent _logger;
 
+    protected override void OnAwake()
+    {
+        this.AssertReference(projectilePrefab);
+    }
+
     protected override ProjectileComponent CreateInstance()
     {
         return Instantiate(projectilePrefab);
@@ -18,6 +24,6 @@ public class ProjectilePoolComponent : PoolComponent<ProjectileComponent>
     protected override void OnDestroyPoolable(ProjectileComponent obj)
     {
         base.OnDestroyPoolable(obj);
-        _logger.Log($"ProjectilePoolComponent: Destroyed projectile instance {obj.name}", this);
+        _logger?.Log($"ProjectilePoolComponent: Destroyed projectile instance {obj.name}", this);
     }
 }

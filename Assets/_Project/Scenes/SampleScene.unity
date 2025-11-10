@@ -6336,6 +6336,10 @@ PrefabInstance:
       propertyPath: _target
       value: 
       objectReference: {fileID: 519420032}
+    - target: {fileID: 2707084487923557623, guid: 3719b3b38fe5a32498a41a2aa63aef24, type: 3}
+      propertyPath: _contactData.Damage
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3196485960804778560, guid: 3719b3b38fe5a32498a41a2aa63aef24, type: 3}
       propertyPath: _logger
       value: 

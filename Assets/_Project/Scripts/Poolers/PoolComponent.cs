@@ -44,6 +44,8 @@ public abstract class PoolComponent<T> : MonoBehaviour where T : Component, IPoo
 
     protected abstract T CreateInstance();
 
+    protected virtual void OnAwake() { }
+
     protected T OnCreatePoolable()
     {
         T obj = CreateInstance();
