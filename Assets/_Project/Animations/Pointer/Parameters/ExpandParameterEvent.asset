@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6328b45414f61d643a2e4e51324edb99, type: 3}
   m_Name: ExpandParameterEvent
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorTriggerParameterEvent
-  _parameter: {fileID: 11400000, guid: cee36f9017dfa954c8a73159502c946b, type: 2}
+  m_Parameter: {fileID: 11400000, guid: 2203a1e2f92679e4c85cd25427606f85, type: 2}

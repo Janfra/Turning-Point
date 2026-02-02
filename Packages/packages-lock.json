@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "ba2caddfac96d2596a1148384ac16eb3b53f104e"
+      "hash": "8bf542c5000e418369286abc13ad1a8348a565ad"
     },
     "com.janito.audiopackage": {
       "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAudioPackage",
@@ -13,6 +13,13 @@
       "source": "git",
       "dependencies": {},
       "hash": "ba2caddfac96d2596a1148384ac16eb3b53f104e"
+    },
+    "com.janito.editorextras": {
+      "version": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoEditorExtrasPackage",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "85eb6841038c87086a1c3faff78d035ad9b2c6c5"
     },
     "com.unity.2d.animation": {
       "version": "12.0.2",

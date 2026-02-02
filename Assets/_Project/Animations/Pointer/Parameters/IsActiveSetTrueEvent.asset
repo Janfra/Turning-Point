@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0deba3cb9ea232d4380e2e664af84a38, type: 3}
   m_Name: IsActiveSetTrueEvent
   m_EditorClassIdentifier: Assembly-CSharp::AnimatorBoolParameterEvent
-  _parameter: {fileID: 11400000, guid: f5120f144d6e4d24199a119b59f8f07e, type: 2}
-  _value: 1
+  m_Parameter: {fileID: 11400000, guid: 8a9ed5a595345c14dba95dae66060231, type: 2}
+  m_Value: 0

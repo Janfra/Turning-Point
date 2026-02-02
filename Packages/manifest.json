@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.janito.animationpackage": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAnimationPackage",
+    "com.janito.audiopackage": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAudioPackage",
+    "com.janito.editorextras": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoEditorExtrasPackage",
     "com.unity.2d.animation": "12.0.2",
     "com.unity.2d.aseprite": "2.0.2",
     "com.unity.2d.psdimporter": "11.0.1",
@@ -17,8 +20,6 @@
     "com.unity.timeline": "1.8.9",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.7",
-    "com.janito.animationpackage": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAnimationPackage",
-    "com.janito.audiopackage": "https://github.com/Janfra/Janito-Unity-Packages.git?path=/JanitoAudioPackage",
     "com.unity.modules.accessibility": "1.0.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",

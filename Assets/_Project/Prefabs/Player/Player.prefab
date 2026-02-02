@@ -91,7 +91,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7382683770782279206}
+      - m_Target: {fileID: 8690065713553972243}
         m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
@@ -104,7 +104,7 @@ MonoBehaviour:
           m_StringArgument: Expand
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7382683770782279206}
+      - m_Target: {fileID: 8690065713553972243}
         m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
@@ -120,7 +120,7 @@ MonoBehaviour:
   _onInteractEnd:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7382683770782279206}
+      - m_Target: {fileID: 8690065713553972243}
         m_TargetAssemblyTypeName: Janito.Animations.AnimatorModifierComponent, Janito.AnimationTools
         m_MethodName: ApplyAnimatorParameterEvent
         m_Mode: 2
@@ -224,7 +224,6 @@ GameObject:
   - component: {fileID: 5023531059902022540}
   - component: {fileID: 1120391894147626487}
   - component: {fileID: 2880531709025604931}
-  - component: {fileID: 7382683770782279206}
   m_Layer: 0
   m_Name: PlayerVisualHandler
   m_TagString: Untagged
@@ -289,19 +288,6 @@ MonoBehaviour:
   _topLeftSprite: {fileID: 5105011444763376755}
   _leftSprite: {fileID: 8641729755190207421}
   _bottomLeftSprite: {fileID: 6955047229917664562}
---- !u!114 &7382683770782279206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675895291565791052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f0c4921506261c4581ee6bc47f273f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Janito.Tools.Animation::Janito.Animations.AnimatorModifierComponent
-  _animator: {fileID: 3765129635956323550}
 --- !u!1 &2993383213166635179
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +587,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2189508302130655591, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3765129635956323550}
+    - targetCorrespondingSourceObject: {fileID: 2189508302130655591, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8690065713553972243}
   m_SourcePrefab: {fileID: 100100000, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
 --- !u!1 &159559038485588817 stripped
 GameObject:
@@ -629,6 +618,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8690065713553972243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159559038485588817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f0c4921506261c4581ee6bc47f273f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Janito.Tools.Animation::Janito.Animations.AnimatorModifierComponent
+  m_Animator: {fileID: 3765129635956323550}
+  m_StaticValueListeners: []
+  references:
+    version: 2
+    RefIds: []
 --- !u!4 &6401542216568020931 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4936706673425434101, guid: c0b5eafb113cae04abf72c525cd1f514, type: 3}
