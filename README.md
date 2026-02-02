@@ -18,6 +18,7 @@ Turning Point is a small project aiming to explore **Game Feel/Juice**. Simple g
 The project includes my custom Unity packages which can be found in my [Janito-Unity-Packages](https://github.com/Janfra/Janito-Unity-Packages) repository. More specifically the following packages:
 - **Janito Animation Package**
 - **Janito Audio Package**
+- **Janito Editor Extras Package**
 
 ## Techniques Applied
 I am actively working on this project, so more techniques will be added, however the current list is as follows:
